@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { FiSun } from 'react-icons/fi'
 import { FaMoon } from 'react-icons/fa'
 
