@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { ChangeEvent } from 'react'
+import PropTypes from 'prop-types';
 
 // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 import { ColumnFlex } from './shared'
 
-function Editor () {
+interface Props {
+  markdownContent: string;
+  setMarkdownContent: (value: string) => void;
+}
+
+const Editor: React.FC<Props> = ({ markdownContent, setMarkdownContent }) => {
     return (
         <ColumnFlex
         id="editor"
@@ -17,6 +23,7 @@ function Editor () {
         Editor
         </h2>
         <textarea
+          onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setMarkdownContent(e.target.value)}
           css={css`
             height: 100%;
             border-radius: 4px;
@@ -33,6 +40,11 @@ function Editor () {
           />
       </ColumnFlex>
     )
+}
+
+Editor.propTypes = {
+  markdownContent: PropTypes.string.isRequired,
+  setMarkdownContent: PropTypes.func.isRequired,
 }
 
 export default Editor;
