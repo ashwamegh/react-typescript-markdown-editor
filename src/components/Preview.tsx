@@ -1,11 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
-import { RowFlex, ColumnFlex } from './shared'
+import { ColumnFlex } from './shared'
 
-function Preview() {
+interface Props {
+    markdownContent: string
+}
+
+const Preview: React.FC<Props> = ({ markdownContent }) => {
     return (
         <ColumnFlex
             id="preview"
@@ -28,5 +33,9 @@ function Preview() {
         </ColumnFlex>
     )
 }
+
+Preview.propTypes = {
+    markdownContent: PropTypes.string.isRequired
+  }
 
 export default Preview;
