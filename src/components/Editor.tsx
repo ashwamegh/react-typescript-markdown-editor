@@ -8,10 +8,11 @@ import { ColumnFlex } from './shared'
 function Editor () {
     return (
         <ColumnFlex
-      css={css`
-          flex: 1;
-          padding: 16px;
-        `}>
+        id="editor"
+        css={css`
+            flex: 1;
+            padding: 16px;
+          `}>
         <h2>
         Editor
         </h2>

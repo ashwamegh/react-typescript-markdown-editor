@@ -8,10 +8,12 @@ import { RowFlex, ColumnFlex } from './shared'
 function Preview() {
     return (
         <ColumnFlex
+            id="preview"
             css={css`
-          flex: 1;
-          padding: 16px;
-        `}>
+            flex: 1;
+            padding: 16px;
+            `}
+        >
             <h2>Preview</h2>
             <div
                 css={css`
