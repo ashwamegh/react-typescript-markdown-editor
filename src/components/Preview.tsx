@@ -9,7 +9,7 @@ function Preview() {
     return (
         <ColumnFlex
             css={css`
-          flex-grow: 1;
+          flex: 1;
           padding: 16px;
         `}>
             <h2>Preview</h2>
