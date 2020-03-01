@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import marked from 'marked'
 
 // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 /** @jsx jsx */
@@ -11,6 +12,8 @@ interface Props {
 }
 
 const Preview: React.FC<Props> = ({ markdownContent }) => {
+    const mardownFormattedContent = ( marked(markdownContent));
+
     return (
         <ColumnFlex
             id="preview"
@@ -28,7 +31,9 @@ const Preview: React.FC<Props> = ({ markdownContent }) => {
         font-size: 100%;
         line-height: inherit;
         padding: 8px;
-      `}>
+      `}
+      dangerouslySetInnerHTML={{__html: mardownFormattedContent}}
+      >
             </div>
         </ColumnFlex>
     )
