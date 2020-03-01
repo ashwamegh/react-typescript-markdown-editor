@@ -42,5 +42,6 @@
   },
   "devDependencies": {
     "@types/marked": "^0.7.2"
-  }
+  },
+  "homepage": "https://ashwamegh.github.io/react-typescript-markdown-editor/"
 }
