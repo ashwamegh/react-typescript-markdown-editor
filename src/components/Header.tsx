@@ -16,7 +16,7 @@ function Header() {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        background-color: #eee;
+        background-color: #f8f541;
         padding: 32px;
     `}>
       <div className="header-title">
