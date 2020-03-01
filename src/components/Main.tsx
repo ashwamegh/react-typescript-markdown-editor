@@ -9,22 +9,23 @@ import Preview from './Preview';
 
 const Main: React.FC =  () => {
   const [markdownContent, setMarkdownContent] = useState<string>(`
-  # H1
-  ## H2
-  ### H3
-  #### H4
-  ##### H5
+# H1
+## H2
+### H3
+#### H4
+##### H5
 
-  __bold__
-  **bold**
-  _italic_
-  `);
+__bold__
+**bold**
+_italic_
+`);
   console.log(markdownContent);
   return (
     <RowFlex
       css={css`
         padding: 32px;
-        height: calc(100vh - 240px);
+        padding-top: 0px;
+        height: calc(100vh - 200px);
         `}>
       <Editor markdownContent={markdownContent} setMarkdownContent={setMarkdownContent}/>
       <Preview markdownContent={markdownContent}/>

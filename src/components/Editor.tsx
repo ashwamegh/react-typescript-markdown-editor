@@ -34,6 +34,7 @@ const Editor: React.FC<Props> = ({ markdownContent, setMarkdownContent }) => {
             padding: 8px 16px;
             resize: none;
             overflow: auto;
+            padding-top: 0px;
             &:focus {
               outline: none;
             }

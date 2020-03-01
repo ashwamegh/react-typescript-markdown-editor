@@ -34,6 +34,7 @@ const Preview: React.FC<Props> = ({ markdownContent }) => {
                 overflow: auto;
                 background: #fff;
                 padding: 8px 16px;
+                padding-top: 0px;
             `}
             dangerouslySetInnerHTML={{__html: mardownFormattedContent}}
             >
