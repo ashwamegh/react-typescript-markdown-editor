@@ -37,6 +37,7 @@ const Editor: React.FC<Props> = ({ markdownContent, setMarkdownContent }) => {
             }
           `}
           rows={9}
+          value={markdownContent}
           />
       </ColumnFlex>
     )
