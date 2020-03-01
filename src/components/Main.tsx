@@ -23,13 +23,12 @@ __bold__
 **bold**
 _italic_
 `);
-  console.log(markdownContent);
   return (
     <RowFlex
       css={css`
         padding: 32px;
         padding-top: 0px;
-        height: calc(100vh - 200px);
+        height: calc(100vh - 170px);
         `}>
       <Editor theme={theme} markdownContent={markdownContent} setMarkdownContent={setMarkdownContent}/>
       <Preview theme={theme} markdownContent={markdownContent}/>
