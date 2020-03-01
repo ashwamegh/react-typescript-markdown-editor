@@ -3,8 +3,8 @@ body {
   font-family: 'Roboto Mono', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 22px;
   letter-spacing: 0;
   box-sizing: border-box;
 }
@@ -12,4 +12,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  min-height: 100vh;
+  transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
+}
+
+a,
+a:focus,
+a:active,
+a:visited,
+a:hover{
+  text-decoration: none;
+  color: inherit;
 }
