@@ -27,11 +27,13 @@ const Editor: React.FC<Props> = ({ markdownContent, setMarkdownContent }) => {
           css={css`
             height: 100%;
             border-radius: 4px;
-            border: 1px solid #eee;
+            border: none;
+            box-shadow: 2px 2px 10px #999;
             font-size: 100%;
             line-height: inherit;
-            padding: 8px;
+            padding: 8px 16px;
             resize: none;
+            overflow: auto;
             &:focus {
               outline: none;
             }

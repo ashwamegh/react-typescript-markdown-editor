@@ -18,6 +18,7 @@ function Header() {
         justify-content: space-between;
         background-color: #f8f541;
         padding: 32px;
+        font-size: 16px;
     `}>
       <div className="header-title">
         Markdown Editor

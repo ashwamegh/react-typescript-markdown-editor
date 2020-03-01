@@ -25,15 +25,18 @@ const Preview: React.FC<Props> = ({ markdownContent }) => {
             <h2>Preview</h2>
             <div
                 css={css`
-        height: 100%;
-        border-radius: 4px;
-        border: 1px solid #eee;
-        font-size: 100%;
-        line-height: inherit;
-        padding: 8px;
-      `}
-      dangerouslySetInnerHTML={{__html: mardownFormattedContent}}
-      >
+                height: 100%;
+                border-radius: 4px;
+                border: none;
+                box-shadow: 2px 2px 10px #999;
+                font-size: 100%;
+                line-height: inherit;
+                overflow: auto;
+                background: #fff;
+                padding: 8px 16px;
+            `}
+            dangerouslySetInnerHTML={{__html: mardownFormattedContent}}
+            >
             </div>
         </ColumnFlex>
     )
