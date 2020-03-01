@@ -7,11 +7,14 @@ body {
   line-height: 22px;
   letter-spacing: 0;
   box-sizing: border-box;
-  min-height: 100vh;
-  background: #eee;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  min-height: 100vh;
+  transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
 }

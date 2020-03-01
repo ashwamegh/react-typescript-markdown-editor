@@ -6,13 +6,24 @@ import { FaMoon } from 'react-icons/fa'
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 
+interface Props {
+  toggleTheme: () => void,
+  theme: string
+}
 
-function Header() {
-  const theme = 'night';
+const Header: React.FC<Props> = ({ theme, toggleTheme }) => {
 
   return (
     <header
-      css={css`
+      css={theme === 'dark' ?
+      css`
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #f89541;
+        padding: 32px;
+        font-size: 16px;
+      `:css`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -23,9 +34,14 @@ function Header() {
       <div className="header-title">
         Markdown Editor
       </div>
-      <div>
+      <div css={
+        css`
+          cursor: pointer;
+        `}
+        onClick={toggleTheme}
+      >
        {
-         theme === 'night'?
+         theme === 'dark'?
          <FaMoon />:
          <FiSun />
        }

@@ -8,10 +8,11 @@ import { ColumnFlex } from './shared'
 
 interface Props {
   markdownContent: string;
-  setMarkdownContent: (value: string) => void;
+  setMarkdownContent: (value: string) => void,
+  theme: string
 }
 
-const Editor: React.FC<Props> = ({ markdownContent, setMarkdownContent }) => {
+const Editor: React.FC<Props> = ({ markdownContent, setMarkdownContent, theme }) => {
     return (
         <ColumnFlex
         id="editor"
@@ -24,7 +25,24 @@ const Editor: React.FC<Props> = ({ markdownContent, setMarkdownContent }) => {
         </h2>
         <textarea
           onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setMarkdownContent(e.target.value)}
-          css={css`
+          css={theme === 'dark'?
+          css`
+            height: 100%;
+            border-radius: 4px;
+            border: none;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+            background: #000;
+            color: #fff;
+            font-size: 100%;
+            line-height: inherit;
+            padding: 8px 16px;
+            resize: none;
+            overflow: auto;
+            &:focus {
+              outline: none;
+            }
+          `
+          : css`
             height: 100%;
             border-radius: 4px;
             border: none;
@@ -34,7 +52,6 @@ const Editor: React.FC<Props> = ({ markdownContent, setMarkdownContent }) => {
             padding: 8px 16px;
             resize: none;
             overflow: auto;
-            padding-top: 0px;
             &:focus {
               outline: none;
             }

@@ -8,10 +8,11 @@ import { css, jsx } from '@emotion/core'
 import { ColumnFlex } from './shared'
 
 interface Props {
-    markdownContent: string
+    markdownContent: string,
+    theme: string
 }
 
-const Preview: React.FC<Props> = ({ markdownContent }) => {
+const Preview: React.FC<Props> = ({ markdownContent, theme }) => {
     const mardownFormattedContent = ( marked(markdownContent));
 
     return (
@@ -24,7 +25,20 @@ const Preview: React.FC<Props> = ({ markdownContent }) => {
         >
             <h2>Preview</h2>
             <div
-                css={css`
+                css={theme === 'dark'
+                ? css`
+                height: 100%;
+                border-radius: 4px;
+                border: none;
+                box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+                font-size: 100%;
+                line-height: inherit;
+                overflow: auto;
+                background: #000;
+                padding: 8px 16px;
+                color: #fff;
+                `
+                : css`
                 height: 100%;
                 border-radius: 4px;
                 border: none;
@@ -34,7 +48,7 @@ const Preview: React.FC<Props> = ({ markdownContent }) => {
                 overflow: auto;
                 background: #fff;
                 padding: 8px 16px;
-                padding-top: 0px;
+                color: #000;
             `}
             dangerouslySetInnerHTML={{__html: mardownFormattedContent}}
             >

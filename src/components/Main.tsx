@@ -7,7 +7,11 @@ import { RowFlex } from './shared'
 import Editor from './Editor';
 import Preview from './Preview';
 
-const Main: React.FC =  () => {
+interface Props {
+  theme: string
+}
+
+const Main: React.FC<Props> =  ({ theme }) => {
   const [markdownContent, setMarkdownContent] = useState<string>(`
 # H1
 ## H2
@@ -27,8 +31,8 @@ _italic_
         padding-top: 0px;
         height: calc(100vh - 200px);
         `}>
-      <Editor markdownContent={markdownContent} setMarkdownContent={setMarkdownContent}/>
-      <Preview markdownContent={markdownContent}/>
+      <Editor theme={theme} markdownContent={markdownContent} setMarkdownContent={setMarkdownContent}/>
+      <Preview theme={theme} markdownContent={markdownContent}/>
     </RowFlex>
   )
 }
