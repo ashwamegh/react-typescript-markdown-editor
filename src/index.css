@@ -18,3 +18,12 @@ code {
   min-height: 100vh;
   transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
 }
+
+a,
+a:focus,
+a:active,
+a:visited,
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}

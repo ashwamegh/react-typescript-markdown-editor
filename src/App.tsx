@@ -4,6 +4,7 @@ import { css, jsx } from '@emotion/core'
 // Components
 import Header from './components/Header'
 import Main from './components/Main'
+import Footer from './components/Footer';
 import useDarkMode from './userDarkMode';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       >
       <Header theme={theme} toggleTheme={toggleTheme}/>
       <Main theme={theme}/>
+      <Footer />
     </div>
   );
 }
