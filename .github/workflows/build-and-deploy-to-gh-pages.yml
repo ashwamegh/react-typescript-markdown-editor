@@ -18,9 +18,9 @@ jobs:
       - name: Set username
         run: git config --global user.name "${{ secrets.adminname }}"
       - name: npm install command
-        run: cd website && npm install
+        run: npm install
       - name: Run build command
-        run: cd website && npm run build
+        run: npm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
