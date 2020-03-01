@@ -21,14 +21,15 @@ const Header: React.FC<Props> = ({ theme, toggleTheme }) => {
         flex-direction: row;
         justify-content: space-between;
         background-color: #f89541;
-        padding: 32px;
+        padding: 24px 32px;
         font-size: 16px;
       `:css`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         background-color: #f8f541;
-        padding: 32px;
+        padding: 24px 32px;
+        box-shadow: 0px -2px 8px #000;
         font-size: 16px;
     `}>
       <div className="header-title">
